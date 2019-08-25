@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tonykjin/custom-store.git"
+    "url": "git+https://github.com/tonykjin/shopping-cart.git"
   },
   "author": "Tony K. Jin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tonykjin/custom-store/issues"
+    "url": "https://github.com/tonykjin/shopping-cart/issues"
   },
-  "homepage": "https://github.com/tonykjin/custom-store#readme",
+  "homepage": "https://github.com/tonykjin/shopping-cart#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-loader": "^8.0.6",
     "font-awesome": "^4.7.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
