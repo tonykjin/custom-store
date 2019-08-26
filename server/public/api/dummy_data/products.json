@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "product_name": "lebron16low",
+        "price": 16000,
+        "short_description": "LeBron is unstoppable on the court and just as influential off of it. The year 2003, LeBron's rookie season and a pivotal year in culture, inspires the LeBron 16 Low. It is powered by Max Air and Zoom Air cushioning technologies, and embodies his clout and versatility."
+    },
+    {
+        "id": 2,
+        "product_name": "kyrie5",
+        "price": 13000,
+        "short_description": "Ball in hand, bucket in mind, Kyrie Irving breaks down the defense using his otherworldly arsenal of moves. The Kyrie 5 gives his fast, all-angle attack a new cushioning technology that aligns with the curved shape of the outsole. Whether breaking or banking, the Nike Air Zoom Turbo responds with a rapid return of energy."
+    },
+    {
+        "id": 3,
+        "product_name": "kyrie2low",
+        "price": 11000,
+        "short_description": "Kyrie's ability to make quick, sharp cuts while handling the ball gives his game an unrivaled edge. Loaded with responsive cushioning, the Kyrie Low 2 features a curved outsole and traction that wraps up the sides, ideal for quick players who continually work the angles to break down the defense."
+    },
+    {
+        "id": 4,
+        "product_name": "kyrie2low",
+        "price": 11000,
+        "short_description": "Kyrie's ability to make quick, sharp cuts while handling the ball gives his game an unrivaled edge. Loaded with responsive cushioning, the Kyrie Low 2 features a curved outsole and traction that wraps up the sides, ideal for quick players who continually work the angles to break down the defense."
+    },
+    {
+        "id": 5,
+        "product_name": "airforcemaxlow",
+        "price": 14000,
+        "short_description": "In an era of small ball, fast and versatile big men are highly coveted. The Nike Air Force Max Low offers hard-hitting impact cushioning, adjustable lockdown, and lightweight containment in a sleek, low-cut package that helps bigs stretch the floor."
+    },
+    {
+        "id": 6,
+        "product_name": "kobeADnxt",
+        "price": 20000,
+        "short_description": "The better a shoe fits, the more you can focus on your speed. The Kobe AD NXT embodies this idea in a basketball shoe, utilizing Nike's innovative lacing technology to lock you in with one pull. The dual-density midsole offers the perfect balance of supportive and responsive, so you can make hard cuts while maintaining speed."
+    },
+    {
+        "id": 7,
+        "product_name": "kobeADnxt",
+        "price": 20000,
+        "short_description": "The better a shoe fits, the more you can focus on your speed. The Kobe AD NXT embodies this idea in a basketball shoe, utilizing Nike's innovative lacing technology to lock you in with one pull. The dual-density midsole offers the perfect balance of supportive and responsive, so you can make hard cuts while maintaining speed."
+    },
+    {
+        "id": 8,
+        "product_name": "kobeIVproto",
+        "price": 18000,
+        "short_description": "The Kobe IV Protro Shoe takes the original low-top masterpiece and gives it a performance upgrade. Faithfully recreated with the same unforgettable aesthetic, it's been retooled to give you a smooth, responsive underfoot sensation and all-day comfort."
+    },
+    {
+        "id": 9,
+        "product_name": "mambafocus",
+        "price": 10000,
+        "short_description": "Like his mamba alter ego, when Kobe Bryant sheds his old skin for new, he comes back deadlier than ever. The Mamba Focus symbolizes his transition with an embossed upper inspired by a snake's metamorphosis. The low-profile outsole keeps you close to the court while optimizing your ability to step back, create space, and elevate—one of Kobe's most devastating moves."
+    },
+    {
+        "id": 10,
+        "product_name": "jordanXXXIII",
+        "price": 17500,
+        "short_description": "The Air Jordan XXXIII rewrites the story of an iconic basketball shoe. Its revolutionary closure system secures you for flight, while new FlightSpeed technology is tuned for optimal energy return."
+    },
+    {
+        "id": 11,
+        "product_name": "jordanCP3.XII",
+        "price": 10000,
+        "short_description": "Designed to match the agile demands of Chris Paul, the Jordan CP3.XII has everything you need to speed up or slow down during possessions. Fabric in the upper is lightweight and breathable, while forefoot cushioning technology provides responsiveness and support on the court."
+    },
+    {
+        "id": 12,
+        "product_name": "pg3",
+        "price": 11000,
+        "short_description": "Paul George's moonshot took him from Palmdale to basketball stardom, and now he's headed to new heights with clouds under his feet. Built on an outsole inspired by moon craters, the PG 3 combines sensational traction with responsive Zoom Air cushioning that helps you move seamlessly between offense and defense."
+    }
+]
