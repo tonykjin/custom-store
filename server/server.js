@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 
-const products = require('./endpoints/products');
+const products = require('./endpoints/products.js');
 
 const mysql = require('mysql');
 const pool = mysql.createPool({

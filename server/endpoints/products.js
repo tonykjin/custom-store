@@ -14,4 +14,7 @@ function products ( connection ) {
             });
         })
     });
+    return router;
 };
+
+module.exports = products;
