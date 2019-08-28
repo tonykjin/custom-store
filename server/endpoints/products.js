@@ -14,6 +14,28 @@ function products ( connection ) {
             });
         })
     });
+    router.get('/product-details', (req, res, next) => {
+        if(!req.query.id) {
+            return res.status(400).send({
+                errors: ['no id provided']
+            });
+        };
+        const id = req.query.id;
+        let query = 'SELECT p.id, p.product_name, p.price, p.short_description, \
+                        GROUP_CONCAT(i.image_url) AS images \
+                        FROM `products` AS p \
+                        JOIN `images` AS i \
+                        ON p.id = i.p_id \
+                        WHERE p.id = ?\
+                    GROUP BY p.id';
+        let insert = [id];
+        connection.query(query, insert, (err, result) => {
+            if (err) return next(err);
+            res.json({
+                'product': result
+            });
+        });
+    });
     return router;
 };
 
