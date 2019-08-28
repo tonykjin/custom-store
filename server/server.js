@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 
-//const require endpoint files here;
+const products = require('./endpoints/products');
 
 const mysql = require('mysql');
 const pool = mysql.createPool({
@@ -18,7 +18,7 @@ const pool = mysql.createPool({
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use() //endpoints here
+app.use('/api', products(pool));
 
 app.use((err, req, res, next) => {
     res.sendStatus(500);
@@ -29,4 +29,5 @@ app.use((err, req, res, next) => {
 });
 app.listen(PORT, () => {
     console.log(`started server on port ${PORT}`);
-})
+});
+
