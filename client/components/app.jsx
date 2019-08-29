@@ -23,7 +23,7 @@ export default class App extends React.Component {
     this.placeOrder = this.placeOrder.bind(this);
   }
   getProducts() {
-    fetch('api/products.php', { method: 'GET' })
+    fetch('api/products')
       .then(res => { return res.json(); })
       .then(data => {
         this.setState({

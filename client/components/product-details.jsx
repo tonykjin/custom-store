@@ -11,7 +11,7 @@ export default class ProductDetails extends React.Component {
     this.formatPrice = this.formatPrice.bind(this);
   }
   getProduct(id) {
-    fetch(`/api/products.php?id=${id}`, { method: 'GET' })
+    fetch(`/api/product-details?id=${id}`, { method: 'GET' })
       .then(res => { return res.json(); })
       .then(data => {
         this.setState({
