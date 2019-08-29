@@ -6,7 +6,12 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="container d-block">
-        <h1 className="col-6 d-inline-block">Wicked Sales</h1>
+        <h1 className="col-6 d-inline-block">
+          <img src="https://i.imgur.com/Mbe4vj1.jpg"
+              style={{ "maxWidth":"15%", "maxHeight": "15%"}}>
+          </img>
+          Hoop Dreams
+        </h1>
         <div className="col-3 d-inline-block"></div>
         <div className='col-3 d-inline-block' style={{ 'textAlign': 'right' }}>
           {this.props.cartItemCount} Items

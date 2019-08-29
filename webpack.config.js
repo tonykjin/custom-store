@@ -36,12 +36,7 @@ module.exports = {
     watchContentBase: true,
     stats: 'minimal',
     proxy: {
-      '/api': {
-        target: 'http://localhost',
-        headers: {
-          Host: 'wicked-sales.localhost'
-        }
-      }
+      '/api': 'http://localhost:3001'
     }
   }
 };

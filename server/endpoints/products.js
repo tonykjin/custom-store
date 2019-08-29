@@ -12,7 +12,7 @@ function products ( connection ) {
             res.status(200).json({
                 'products': result
             });
-        })
+        });
     });
     router.get('/product-details', (req, res, next) => {
         if(!req.query.id) {
@@ -32,7 +32,7 @@ function products ( connection ) {
         connection.query(query, insert, (err, result) => {
             if (err) return next(err);
             res.json({
-                'product': result
+                'product-details': result
             });
         });
     });
