@@ -1,11 +1,11 @@
 const express = require('express');
 require('dotenv').config();
-const bodyParser = require('body-parser');
 
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 const products = require('./endpoints/products.js');
+const cart = require('./endpoints/cart.js');
 
 const mysql = require('mysql');
 const pool = mysql.createPool({
@@ -16,9 +16,9 @@ const pool = mysql.createPool({
 });
 
 const app = express();
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', products(pool));
+app.use('/api', cart(pool));
 
 app.use((err, req, res, next) => {
     res.sendStatus(500);
