@@ -6,7 +6,7 @@ import CartSummary from './cart-summary';
 import CheckoutForm from './checkout-form';
 
 export default class App extends React.Component {
-  constructor(props) {
+  constructor( props ) {
     super(props);
     this.state = {
       view: {
@@ -31,7 +31,7 @@ export default class App extends React.Component {
         });
       });
   }
-  setView(name, params) {
+  setView( name, params ) {
     this.setState({
       view: {
         name: name,
@@ -39,8 +39,8 @@ export default class App extends React.Component {
       }
     });
   }
-  getCartItems() {
-    fetch('/api/cart.php', { method: 'GET' })
+  getCartItems( id ) {
+    fetch(`/api/cart${id}`, { method: 'GET' })
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -57,7 +57,7 @@ export default class App extends React.Component {
       },
       body: JSON.stringify(product)
     };
-    fetch('/api/cart.php', init)
+    fetch('/api/cart', init)
       .then(data => data.json())
       .then(() => {
         let newState = [...this.state.cart];
@@ -122,3 +122,40 @@ export default class App extends React.Component {
     }
   }
 }
+
+
+
+
+
+
+
+const outputArray = [];
+// const example = {
+//   0: 1.5, //<--
+//   1: 4.2,
+//   2: 4.0,
+//   3: 5.2,
+//   4: 5.5
+// };
+
+const example = [
+  [1.5, 4.2, 4.0, 5.2, 5.5],
+  [3.2, 2, 5.0, 2.5, 1.2]
+];
+
+for (var x = 0; x < 2; x++) {
+
+}
+const array = [];
+let i = 0;
+while (outputArray.length <= 4) {
+  array.push(example[i], example[i]);
+  if (array.length >= 10) {
+    outputArray.push(array);
+  }
+  i++;
+}
+//array in array
+
+//0 -> [example[0], example[0], example[1], example[2], example[3], example[3], example[4], example[4]]
+//1 -> [example[0], example[0], example[1], example[2], example[3], example[3], example[4], example[4]]
