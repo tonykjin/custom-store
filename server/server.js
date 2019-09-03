@@ -16,6 +16,17 @@ const pool = mysql.createPool({
 });
 
 const app = express();
+const session = require('express-session');
+const uuid = require('uuid/v1');
+
+app.set('trust proxy', 1);
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    id: req => {
+        return uuid();
+    }
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', products(pool));
 app.use('/api', cart(pool));
