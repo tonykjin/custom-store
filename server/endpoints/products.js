@@ -1,6 +1,6 @@
 const express = require('express');
 
-function products ( connection ) {
+function products(connection) {
     const router = express.Router();
     router.get('/products', (req, res, next) => {
         let query = 'SELECT products.id, products.product_name, products.price, products.short_description, \
