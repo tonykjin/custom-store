@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 const products = require('./endpoints/products.js');
 const cart = require('./endpoints/cart.js');
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const pool = mysql.createPool({
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USER,
@@ -15,21 +15,22 @@ const pool = mysql.createPool({
     database: process.env.MYSQL_DATABASE
 });
 
+const db = pool.promise();
+
 const app = express();
-const session = require('express-session');
-const uuid = require('uuid/v1');
+const session = require('cookie-session');
 
 app.set('trust proxy', 1);
 app.use(session({
-    secret: process.env.SESSION_SECRET,
-    id: req => {
-        return uuid();
-    }
+    name: 'session',
+    secret: process.env.SESSION_SECRET
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api', products(pool));
-app.use('/api', cart(pool));
+app.use('/api', products(db));
+app.use('/api', cart(db));
+
+app.use('/api', require('./endpoints/test')());
 
 app.use((err, req, res, next) => {
     res.sendStatus(500);
