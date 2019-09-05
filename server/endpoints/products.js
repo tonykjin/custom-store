@@ -30,7 +30,7 @@ function products(connection) {
                             FROM `products` AS p \
                             JOIN `images` AS i \
                             ON p.id = i.p_id \
-                            WHERE p.id = ?\
+                            WHERE p.id = ? \
                             GROUP BY p.id';
             let insert = [id];
             const [ result ] = await connection.query(query, insert);

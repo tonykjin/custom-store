@@ -30,8 +30,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', products(db));
 app.use('/api', cart(db));
 
-app.use('/api', require('./endpoints/test')());
-
 app.use((err, req, res, next) => {
     res.sendStatus(500);
     console.error(err);
