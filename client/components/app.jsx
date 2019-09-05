@@ -31,7 +31,7 @@ export default class App extends React.Component {
         'Content-Type': 'application/json'
       }
     };
-    fetch('api/check-cart', init )
+    fetch('api/check-cart', init)
       .then(res => { return res.json(); });
   }
   getProducts() {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
       .then(res => { return res.json(); })
       .then(data => {
         this.setState({
-          products: data
+          products: data.products
         });
       });
   }
@@ -90,7 +90,7 @@ export default class App extends React.Component {
         'cart': JSON.stringify(this.state.cart)
       }
     };
-    fetch('/api/orders.php', init)
+    fetch('/api/order', init)
       .then(res => res.json());
     this.setState({
       cart: []

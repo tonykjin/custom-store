@@ -4,6 +4,7 @@ import { Container, Row } from 'reactstrap';
 
 export default class ProductList extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <Container>
         <Row>
