@@ -16,14 +16,26 @@ export default class App extends React.Component {
       products: [],
       cart: []
     };
+    this.checkCart = this.checkCart.bind(this);
     this.getProducts = this.getProducts.bind(this);
     this.setView = this.setView.bind(this);
     this.getCartItems = this.getCartItems.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
   }
+  checkCart() {
+    const init = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    };
+    fetch('api/check-cart', init )
+      .then(res => { return res.json(); });
+  }
   getProducts() {
-    fetch('api/products')
+    fetch('api/products', { method: 'GET' })
       .then(res => { return res.json(); })
       .then(data => {
         this.setState({
@@ -39,8 +51,8 @@ export default class App extends React.Component {
       }
     });
   }
-  getCartItems( id ) {
-    fetch(`/api/cart${id}`, { method: 'GET' })
+  getCartItems() {
+    fetch('api/cart', { method: 'GET' })
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -48,7 +60,7 @@ export default class App extends React.Component {
         });
       });
   }
-  addToCart(product) {
+  addToCart( product ) {
     const init = {
       method: 'POST',
       headers: {
@@ -67,7 +79,7 @@ export default class App extends React.Component {
         });
       });
   }
-  placeOrder(details) {
+  placeOrder( details ) {
     const init = {
       method: 'POST',
       headers: {
@@ -80,13 +92,13 @@ export default class App extends React.Component {
     };
     fetch('/api/orders.php', init)
       .then(res => res.json());
-
     this.setState({
       cart: []
     });
     this.setView('catalog', {});
   }
   componentDidMount() {
+    this.checkCart();
     this.getProducts();
     this.getCartItems();
   }
@@ -122,40 +134,3 @@ export default class App extends React.Component {
     }
   }
 }
-
-
-
-
-
-
-
-const outputArray = [];
-// const example = {
-//   0: 1.5, //<--
-//   1: 4.2,
-//   2: 4.0,
-//   3: 5.2,
-//   4: 5.5
-// };
-
-const example = [
-  [1.5, 4.2, 4.0, 5.2, 5.5],
-  [3.2, 2, 5.0, 2.5, 1.2]
-];
-
-for (var x = 0; x < 2; x++) {
-
-}
-const array = [];
-let i = 0;
-while (outputArray.length <= 4) {
-  array.push(example[i], example[i]);
-  if (array.length >= 10) {
-    outputArray.push(array);
-  }
-  i++;
-}
-//array in array
-
-//0 -> [example[0], example[0], example[1], example[2], example[3], example[3], example[4], example[4]]
-//1 -> [example[0], example[0], example[1], example[2], example[3], example[3], example[4], example[4]]
