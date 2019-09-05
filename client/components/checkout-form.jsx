@@ -11,6 +11,7 @@ export default class CheckoutForm extends React.Component {
         username: null,
         card: null,
         address: null
+        //add in zip, country
       }
     };
     this.handleNameChange = this.handleNameChange.bind(this);
