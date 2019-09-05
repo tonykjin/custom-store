@@ -1,6 +1,6 @@
 const express = require('express');
 
-function products(connection) {
+function products( connection ) {
     const router = express.Router();
 
     router.get('/products', async (req, res, next) => {

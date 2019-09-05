@@ -24,11 +24,18 @@ export default class App extends React.Component {
     this.placeOrder = this.placeOrder.bind(this);
   }
   checkCart() {
-    fetch('api/check-cart')
+    const init = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    };
+    fetch('api/check-cart', init )
       .then(res => { return res.json(); });
   }
   getProducts() {
-    fetch('api/products')
+    fetch('api/products', { method: 'GET' })
       .then(res => { return res.json(); })
       .then(data => {
         this.setState({
@@ -45,7 +52,7 @@ export default class App extends React.Component {
     });
   }
   getCartItems() {
-    fetch(`/api/cart`, { method: 'GET' })
+    fetch('api/cart', { method: 'GET' })
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -53,7 +60,7 @@ export default class App extends React.Component {
         });
       });
   }
-  addToCart(product) {
+  addToCart( product ) {
     const init = {
       method: 'POST',
       headers: {
@@ -72,7 +79,7 @@ export default class App extends React.Component {
         });
       });
   }
-  placeOrder(details) {
+  placeOrder( details ) {
     const init = {
       method: 'POST',
       headers: {
@@ -85,7 +92,6 @@ export default class App extends React.Component {
     };
     fetch('/api/orders.php', init)
       .then(res => res.json());
-
     this.setState({
       cart: []
     });

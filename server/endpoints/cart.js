@@ -1,6 +1,6 @@
 const express = require('express');
 
-function cart(connection) {
+function cart( connection ) {
     const router = express.Router();
 
     router.post('/check-cart', async (req, res, next) => {
