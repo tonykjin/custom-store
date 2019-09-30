@@ -12,4 +12,3 @@ Prototyping (FIGMA) link : https://www.figma.com/file/M3YnzYD8IukpnCl5zB7tZA/Hoo
 
 Task Management (MeisterTask) link : https://www.meistertask.com/app/project/aq7O1aPW/hoop-dreams
 
-DB Schema link : https://dbdiagram.io/d/5d62e3d4ced98361d6dde56b
