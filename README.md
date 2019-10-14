@@ -12,3 +12,8 @@ Prototyping (FIGMA) link : https://www.figma.com/file/M3YnzYD8IukpnCl5zB7tZA/Hoo
 
 Task Management (MeisterTask) link : https://www.meistertask.com/app/project/aq7O1aPW/hoop-dreams
 
+
+**Scripts**\
+Webpack-build : `npm run dev`\
+Node: `npm run watch`\
+Both (concurrently) : `npm run start`
